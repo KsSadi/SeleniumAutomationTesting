@@ -12,8 +12,12 @@ public class LoginPage extends Base {
     @FindBy(name = "password")
     WebElement userPasswordid;
 
-    @FindBy(xpath = "//*[@id=\"btnSignIn\"]")
+    @FindBy(xpath = "//*[@id=\"next_btn\"]")
+    WebElement Nextbtn;
+
+    @FindBy(xpath = "//*[@id=\"login_btn\"]")
     WebElement Loginbtn;
+
 
     public LoginPage(){
         PageFactory.initElements(driver, this);
@@ -30,6 +34,12 @@ public class LoginPage extends Base {
         userPasswordid.isDisplayed();
         userPasswordid.clear();
         userPasswordid.sendKeys(UserPassword);
+        return this;
+    }
+    public LoginPage clickNextbtn() throws InterruptedException {
+        Nextbtn.isDisplayed();
+        Nextbtn.click();
+        Thread.sleep(5000);
         return this;
     }
 

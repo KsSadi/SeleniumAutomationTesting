@@ -2,9 +2,11 @@ package SiteName.Util;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.support.FindBy;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -55,13 +57,21 @@ public class Base  {
         return properties.getProperty("baseurl");
     }
 
-    public String getUserEmail(){
+    // Login Page Elements From Home Page
+ /*   @FindBy(xpath = "//*[@id=\"HomePageFlexOrderDiv_2\"]/div[1]/a[1]")
+    WebElement loginButton;
+
+    public void clickLoginButton(){
+        loginButton.click();
+    }*/
+
+   /* public String getUserEmail(){
         return properties.getProperty("usermail");
     }
 
     public String getPassword(){
         return properties.getProperty("password");
-    }
+    }*/
 
     public String getbrowser(){
         return properties.getProperty("browsername");
