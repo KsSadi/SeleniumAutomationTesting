@@ -16,9 +16,9 @@ public class LoginTest extends Base {
         BasePage basePage = new BasePage();
         basePage.clickLoginButton();
         LoginPage loginPage = new LoginPage();
-        loginPage.clickUserEmailfld("testcompanyapplicant1@gmail.com");
+        loginPage.clickUserEmailfld("");
         loginPage.clickNextbtn();
-        loginPage.clickUserPasswordfld("123456a@");
+        loginPage.clickUserPasswordfld("");
         DashboardPage dashboardPage = loginPage.clickLoginbtn();
         VisaRecommendationTest visaRecommendationTest = new VisaRecommendationTest();
         visaRecommendationTest.visaRecommendationShouldSuccess();
