@@ -1,14 +1,12 @@
-package SiteName.Pages;
+package Application.Pages;
 
-import SiteName.Util.Base;
+import Application.Util.Base;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-
-import java.util.List;
 
 public class FormPage extends Base {
     //Constructor
@@ -70,19 +68,19 @@ public class FormPage extends Base {
     public FormPage clickvisaTypebtn() throws InterruptedException {
         visaTypebtn.isDisplayed();
         visaTypebtn.click();
-        Thread.sleep(2000); //Wait 5 Seconds
+        Thread.sleep(2000); //Wait 2 Seconds
         return this;
     }
     public FormPage clickeTypeChecked_1() throws InterruptedException {
         eTypeChecked_1.isDisplayed();
         eTypeChecked_1.click();
-        Thread.sleep(2000); //Wait 5 Seconds
+        Thread.sleep(2000); //Wait 2 Seconds
         return this;
     }
     public FormPage clicknextbtn1() throws InterruptedException {
         nextbtn1.isDisplayed();
         nextbtn1.click();
-        Thread.sleep(2000); //Wait 5 Seconds
+        Thread.sleep(2000); //Wait 2 Seconds
         return this;
     }
     public FormPage country() throws InterruptedException {
@@ -92,7 +90,7 @@ public class FormPage extends Base {
         WebElement country_dropdown = driver.findElement(By.id("mission_country_id"));
         Select objSelect = new Select(country_dropdown);
         objSelect.selectByValue("2");
-        Thread.sleep(2000); //Wait 5 Seconds
+        Thread.sleep(2000); //Wait 2 Seconds
         return this;
     }
     //Dropdown for High Commission
@@ -100,7 +98,7 @@ public class FormPage extends Base {
         WebElement high_commision_dropdown = driver.findElement(By.id("high_commision_id"));
         Select objSelect = new Select(high_commision_dropdown);
         objSelect.selectByValue("34");
-        Thread.sleep(2000); //Wait 5 Seconds
+        Thread.sleep(2000); //Wait 2 Seconds
         return this;
     }
 
@@ -127,14 +125,17 @@ public class FormPage extends Base {
     WebElement savePhoto;
     public FormPage clickempPhoto() throws InterruptedException {
         WebElement empPhoto = driver.findElement(By.name("investorPhotoUploadBtn"));
-        empPhoto.sendKeys("C:\\Users\\sadi\\Desktop\\profile.png");
-        Thread.sleep(3000); //Wait 5 Seconds
+        String relativeFilePath = "/src/test/java/Application/File/profile.pdf";
+        String projectFolderPath = System.getProperty("user.dir");
+        String absoluteFilePath = projectFolderPath + relativeFilePath;
+        empPhoto.sendKeys(absoluteFilePath);
+        Thread.sleep(3000); //Wait 3 Seconds
         return this;
     }
     public FormPage clicksavePhoto() throws InterruptedException {
         savePhoto.isDisplayed();
         savePhoto.click();
-        Thread.sleep(2000); //Wait 5 Seconds
+        Thread.sleep(2000); //Wait 2 Seconds
         return this;
     }
 
@@ -178,14 +179,14 @@ public class FormPage extends Base {
         WebElement nationality_dropdown = driver.findElement(By.id("emp_nationality_id"));
         Select objSelect = new Select(nationality_dropdown);
         objSelect.selectByValue("226");
-        Thread.sleep(5000); //Wait 5 Seconds
+        Thread.sleep(5000); //Wait 2 Seconds
         return this;
     }
     public FormPage basicPaymentType() throws InterruptedException {
         WebElement payment_type_dropdown = driver.findElement(By.name("basic_payment_type_id"));
         Select objSelect = new Select(payment_type_dropdown);
         objSelect.selectByValue("1");
-        Thread.sleep(5000); //Wait 5 Seconds
+        Thread.sleep(5000); //Wait 2 Seconds
         return this;
     }
     public FormPage clickbasicLocalAmount(String BasicLocalAmount){
@@ -198,28 +199,28 @@ public class FormPage extends Base {
         WebElement basic_currency_dropdown = driver.findElement(By.name("basic_local_currency_id"));
         Select objSelect = new Select(basic_currency_dropdown);
         objSelect.selectByValue("107");
-        Thread.sleep(5000); //Wait 5 Seconds
+        Thread.sleep(5000); //Wait 2 Seconds
         return this;
     }
     public FormPage officeDivision() throws InterruptedException {
         WebElement office_division_dropdown = driver.findElement(By.name("ex_office_division_id"));
         Select objSelect = new Select(office_division_dropdown);
         objSelect.selectByValue("652");
-        Thread.sleep(5000); //Wait 5 Seconds
+        Thread.sleep(5000); //Wait 2 Seconds
         return this;
     }
     public FormPage officeDistrict() throws InterruptedException {
         WebElement office_district_dropdown = driver.findElement(By.id("ex_office_district_id"));
         Select objSelect = new Select(office_district_dropdown);
         objSelect.selectByValue("61");
-        Thread.sleep(5000); //Wait 5 Seconds
+        Thread.sleep(5000); //Wait 2 Seconds
         return this;
     }
     public FormPage officeThana() throws InterruptedException {
         WebElement office_thana_dropdown = driver.findElement(By.name("ex_office_thana_id"));
         Select objSelect = new Select(office_thana_dropdown);
         objSelect.selectByValue("442");
-        Thread.sleep(5000); //Wait 5 Seconds
+        Thread.sleep(5000); //Wait 2 Seconds
         return this;
     }
     public FormPage clickexOfficePostCode(String ExOfficePostCode){
@@ -286,14 +287,14 @@ public class FormPage extends Base {
         WebElement nextbtn2 = driver.findElement(By.xpath("//*[@id=\"VisaRecommendationForm\"]/div[3]/ul/li[2]/a"));
         nextbtn2.isDisplayed();
         nextbtn2.click();
-        Thread.sleep(2000); //Wait 5 Seconds
+        Thread.sleep(2000); //Wait 2 Seconds
         return this;
     }
     public FormPage visitBangladesh() throws InterruptedException {
         WebElement visitBangladeshId = driver.findElement(By.xpath("//*[@id=\"travel_history_no\"]"));
         visitBangladeshId.isDisplayed();
         visitBangladeshId.click();
-        Thread.sleep(2000); //Wait 5 Seconds
+        Thread.sleep(2000); //Wait 2 Seconds
         return this;
     }
     public FormPage localExecutive(String LocalExecutive) throws InterruptedException {
@@ -328,12 +329,15 @@ public class FormPage extends Base {
         WebElement nextbtn3 = driver.findElement(By.xpath("//*[@id=\"VisaRecommendationForm\"]/div[3]/ul/li[2]/a"));
         nextbtn3.isDisplayed();
         nextbtn3.click();
-        Thread.sleep(2000); //Wait 5 Seconds
+        Thread.sleep(2000); //Wait 2 Seconds
         return this;
     }
     public FormPage passportUpload() throws InterruptedException {
         WebElement passportUpload = driver.findElement(By.xpath("//*[@id=\"file11\"]"));
-        passportUpload.sendKeys("C:\\Users\\sadi\\Desktop\\file.pdf");
+        String relativeFilePath = "/src/test/java/Application/File/file.pdf";
+        String projectFolderPath = System.getProperty("user.dir");
+        String absoluteFilePath = projectFolderPath + relativeFilePath;
+        passportUpload.sendKeys(absoluteFilePath);
         Thread.sleep(5000); //Wait 5 Seconds
         return this;
     }
@@ -341,56 +345,56 @@ public class FormPage extends Base {
         WebElement nextbtn4 = driver.findElement(By.xpath("//*[@id=\"VisaRecommendationForm\"]/div[3]/ul/li[2]/a"));
         nextbtn4.isDisplayed();
         nextbtn4.click();
-        Thread.sleep(2000); //Wait 5 Seconds
+        Thread.sleep(2000); //Wait 2 Seconds
         return this;
     }
     public FormPage agree() throws InterruptedException {
         WebElement agree = driver.findElement(By.xpath("//*[@id=\"accept_terms\"]"));
         agree.isDisplayed();
         agree.click();
-        Thread.sleep(2000); //Wait 5 Seconds
+        Thread.sleep(2000); //Wait 2 Seconds
         return this;
     }
     public FormPage nextbtn5() throws InterruptedException {
         WebElement nextbtn5 = driver.findElement(By.xpath("//*[@id=\"VisaRecommendationForm\"]/div[3]/ul/li[2]/a"));
         nextbtn5.isDisplayed();
         nextbtn5.click();
-        Thread.sleep(2000); //Wait 5 Seconds
+        Thread.sleep(2000); //Wait 2 Seconds
         return this;
     }
     public FormPage preview() throws InterruptedException {
         WebElement preview = driver.findElement(By.xpath("//*[@id=\"VisaRecommendationForm\"]/div[3]/ul/li[3]/a"));
         preview.isDisplayed();
         preview.click();
-        Thread.sleep(2000); //Wait 5 Seconds
+        Thread.sleep(2000); //Wait 2 Seconds
         return this;
     }
     public FormPage goBack() throws InterruptedException {
         WebElement goBack = driver.findElement(By.xpath("//*[@id=\"closeBtn\"]"));
         goBack.isDisplayed();
         goBack.click();
-        Thread.sleep(2000); //Wait 5 Seconds
+        Thread.sleep(2000); //Wait 2 Seconds
         return this;
     }
     public FormPage submit() throws InterruptedException {
         WebElement submit = driver.findElement(By.xpath("//*[@id=\"submitForm\"]"));
         submit.isDisplayed();
         submit.click();
-        Thread.sleep(2000); //Wait 5 Seconds
+        Thread.sleep(2000); //Wait 2 Seconds
         return this;
     }
     public FormPage account() throws InterruptedException {
         WebElement account = driver.findElement(By.xpath("//*[@id=\"btn\"]"));
         account.isDisplayed();
         account.click();
-        Thread.sleep(2000); //Wait 5 Seconds
+        Thread.sleep(2000); //Wait 2 Seconds
         return this;
     }
     public FormPage confirm() throws InterruptedException {
         WebElement confirm = driver.findElement(By.xpath("/html/body/div[3]/div/div[6]/button[1]"));
         confirm.isDisplayed();
         confirm.click();
-        Thread.sleep(2000); //Wait 5 Seconds
+        Thread.sleep(2000); //Wait 2 Seconds
         return this;
     }
     public FormPage accountNo(String AccountNo) throws InterruptedException {
@@ -398,7 +402,7 @@ public class FormPage extends Base {
         accountNo.isDisplayed();
         accountNo.clear();
         accountNo.sendKeys(AccountNo);
-        Thread.sleep(2000); //Wait 5 Seconds
+        Thread.sleep(2000); //Wait 2 Seconds
         return this;
     }
     public FormPage accountName(String AccountName) throws InterruptedException {
@@ -406,7 +410,7 @@ public class FormPage extends Base {
         accountName.isDisplayed();
         accountName.clear();
         accountName.sendKeys(AccountName);
-        Thread.sleep(2000); //Wait 5 Seconds
+        Thread.sleep(2000); //Wait 2 Seconds
         return this;
     }
     public FormPage accountMobile(String AccountMbl) throws InterruptedException {
@@ -414,14 +418,14 @@ public class FormPage extends Base {
         accountMobile.isDisplayed();
         accountMobile.clear();
         accountMobile.sendKeys(AccountMbl);
-        Thread.sleep(2000); //Wait 5 Seconds
+        Thread.sleep(2000); //Wait 2 Seconds
         return this;
     }
     public FormPage accountNext() throws InterruptedException {
         WebElement accountNext = driver.findElement(By.xpath("//*[@id=\"btn\"]"));
         accountNext.isDisplayed();
         accountNext.click();
-        Thread.sleep(2000); //Wait 5 Seconds
+        Thread.sleep(2000); //Wait 2 Seconds
         return this;
     }
     public FormPage otp(String Otp) throws InterruptedException {
@@ -429,14 +433,14 @@ public class FormPage extends Base {
         otp.isDisplayed();
         otp.clear();
         otp.sendKeys(Otp);
-        Thread.sleep(2000); //Wait 5 Seconds
+        Thread.sleep(2000); //Wait 2 Seconds
         return this;
     }
     public FormPage otpConfirm() throws InterruptedException {
         WebElement otpConfirm = driver.findElement(By.xpath("//*[@id=\"btnConfirm\"]"));
         otpConfirm.isDisplayed();
         otpConfirm.click();
-        Thread.sleep(2000); //Wait 5 Seconds
+        Thread.sleep(2000); //Wait 2 Seconds
         return this;
     }
 }

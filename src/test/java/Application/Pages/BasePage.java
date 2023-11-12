@@ -1,6 +1,6 @@
-package SiteName.Pages;
+package Application.Pages;
 
-import SiteName.Util.Base;
+import Application.Util.Base;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;

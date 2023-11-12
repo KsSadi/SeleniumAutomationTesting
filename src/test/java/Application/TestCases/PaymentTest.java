@@ -1,7 +1,7 @@
-package SiteName.TestCases;
+package Application.TestCases;
 
-import SiteName.Pages.*;
-import SiteName.Util.Base;
+import Application.Pages.*;
+import Application.Util.Base;
 import org.testng.annotations.Test;
 
 public class PaymentTest extends Base {
@@ -15,11 +15,11 @@ public class PaymentTest extends Base {
        FormPage formPage = new FormPage();
         formPage.account();
         formPage.confirm();
-        formPage.accountNo("0002634313655");
-        formPage.accountName("Sadi");
-        formPage.accountMobile("01710563521");
+        formPage.accountNo(getAccountNumber());
+        formPage.accountName(getAccountName());
+        formPage.accountMobile(getAccountMobile());
         formPage.accountNext();
-        formPage.otp("123456");
+        formPage.otp(getPaymentOtp());
         formPage.otpConfirm();
     }
 }

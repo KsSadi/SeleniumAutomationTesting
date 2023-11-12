@@ -1,6 +1,6 @@
-package SiteName.Pages;
+package Application.Pages;
 
-import SiteName.Util.Base;
+import Application.Util.Base;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -21,13 +21,6 @@ public class DashboardPage extends Base {
         Thread.sleep(5000); //Wait 5 Seconds
         return this;
     }
-    public VisaListPage NewVisaRecommendationbtn() throws InterruptedException {
-        NewVisaRecommendationbtn.isDisplayed();
-        NewVisaRecommendationbtn.click();
-        Thread.sleep(5000); //Wait 5 Seconds
-        return new VisaListPage();
-    }
-
 
 
 

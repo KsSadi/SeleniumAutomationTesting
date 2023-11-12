@@ -1,9 +1,9 @@
-package SiteName.TestCases;
+package Application.TestCases;
 
-import SiteName.Pages.DashboardPage;
-import SiteName.Pages.FormPage;
-import SiteName.Pages.VisaListPage;
-import SiteName.Util.Base;
+import Application.Pages.DashboardPage;
+import Application.Pages.FormPage;
+import Application.Pages.VisaListPage;
+import Application.Util.Base;
 import org.testng.annotations.Test;
 
 public class VisaRecommendationTest extends Base {

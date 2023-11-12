@@ -1,8 +1,7 @@
-package SiteName.TestCases;
+package Application.TestCases;
 
-import SiteName.Pages.*;
-import SiteName.Util.Base;
-import org.testng.Assert;
+import Application.Pages.*;
+import Application.Util.Base;
 import org.testng.annotations.Test;
 
 public class LoginTest extends Base {
@@ -16,14 +15,14 @@ public class LoginTest extends Base {
         BasePage basePage = new BasePage();
         basePage.clickLoginButton();
         LoginPage loginPage = new LoginPage();
-        loginPage.clickUserEmailfld("");
+        loginPage.clickUserEmailfld(getEmail());
         loginPage.clickNextbtn();
-        loginPage.clickUserPasswordfld("");
+        loginPage.clickUserPasswordfld(getPassword());
+
         DashboardPage dashboardPage = loginPage.clickLoginbtn();
         VisaRecommendationTest visaRecommendationTest = new VisaRecommendationTest();
         visaRecommendationTest.visaRecommendationShouldSuccess();
         PaymentTest paymentTest = new PaymentTest();
         paymentTest.paymentShouldSuccess();
-
     }
 }
