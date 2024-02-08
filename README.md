@@ -193,9 +193,9 @@ public FormPage passportUpload() throws InterruptedException {
 * Run the test from `src/test/java/Application/TestCases` folder.
 
 ## #Tutorial:
-* View [Presentation](https://www.guru99.com/selenium-tutorial.html)
-* Selenium Tutorial for Beginners: [Part-1](https://www.youtube.com/watch?v=8hjNG9GZGnQ)
-* Selenium Tutorial for Beginners: [Part-2](https://www.youtube.com/watch?v=8hjNG9GZGnQ)
+* View [Presentation](#)
+* Selenium Tutorial for Beginners: [Part-1]([https://www.youtube.com/watch?v=8hjNG9GZGnQ](https://vgallery.oss.net.bd/video/180/software-testing-automation-testing-using-selenium---part-1?channelName=_6502d09fa57d1))
+* Selenium Tutorial for Beginners: [Part-2](#)
 
 ## #About Me:
 * Name: Md. Khaled Saifullah Sadi
