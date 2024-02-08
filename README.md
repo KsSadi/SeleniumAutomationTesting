@@ -194,7 +194,7 @@ public FormPage passportUpload() throws InterruptedException {
 
 ## #Tutorial:
 * View [Presentation](#)
-* Selenium Tutorial for Beginners: [Part-1]([https://www.youtube.com/watch?v=8hjNG9GZGnQ](https://vgallery.oss.net.bd/video/180/software-testing-automation-testing-using-selenium---part-1?channelName=_6502d09fa57d1))
+* Selenium Tutorial for Beginners: [Part-1](https://vgallery.oss.net.bd/video/180/software-testing-automation-testing-using-selenium---part-1?channelName=_6502d09fa57d1)
 * Selenium Tutorial for Beginners: [Part-2](#)
 
 ## #About Me:
